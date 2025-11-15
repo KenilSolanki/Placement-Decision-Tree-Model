@@ -34,8 +34,8 @@ if st.button('Predict Placement'):
     })
 
     # Make prediction
-    prediction = model.predict(scaled_input)
-    prediction_proba = model.predict_proba(scaled_input)
+    prediction = model.predict(input_data)
+    prediction_proba = model.predict_proba(input_data)
 
     if prediction[0] == 1:
         st.success(f'**Prediction: Placed** (Confidence: {prediction_proba[0][1]:.2f})')
