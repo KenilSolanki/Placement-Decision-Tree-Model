@@ -5,7 +5,6 @@ import numpy as np
 
 # Load the model and scaler
 model = joblib.load('placement_dt_model.pkl')
-scaler = joblib.load('placement_scaler.pkl')
 
 st.title('College Placement Prediction App')
 st.write('Enter the student details to predict placement status.')
