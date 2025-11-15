@@ -77,8 +77,6 @@ if st.button('Predict Placement'):
     prediction_label = 'Yes' if prediction_raw[0] == 1 else 'No'
 
     st.write(f"### Predicted Placement: {prediction_label}")
-    st.write(f"Probability of No Placement: {prediction_proba[0][0]:.2f}")
-    st.write(f"Probability of Yes Placement: {prediction_proba[0][1]:.2f}")
 
     if prediction_label == 'Yes':
         st.success("**Prediction:** This student is likely to get placed!")
