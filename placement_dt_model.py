@@ -33,9 +33,6 @@ if st.button('Predict Placement'):
         'Projects_Completed': [projects_completed]
     })
 
-    # Scale the input data
-    scaled_input = scaler.transform(input_data)
-
     # Make prediction
     prediction = model.predict(scaled_input)
     prediction_proba = model.predict_proba(scaled_input)
