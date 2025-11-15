@@ -69,8 +69,9 @@ user_input_final = user_input_processed[expected_columns]
 
 # --- Make Prediction ---
 if st.button('Predict Placement'):
-    prediction_raw = model.predict(expected_columns)
-    prediction_proba = model.predict_proba(expected_columns)
+    # CORRECTED LINE: Pass the preprocessed user input DataFrame, not the column names.
+    prediction_raw = model.predict(user_input_final)
+    prediction_proba = model.predict_proba(user_input_final)
 
     # Map numerical prediction back to 'Yes'/'No' labels
     prediction_label = 'Yes' if prediction_raw[0] == 1 else 'No'
